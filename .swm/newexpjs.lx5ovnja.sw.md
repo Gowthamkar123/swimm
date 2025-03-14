@@ -38,17 +38,7 @@ app.listen(port, () => {
 The application provides endpoints to retrieve all posts or a specific post by its ID. This is important for accessing the stored data and ensuring users can view the posts they are interested in.
 
 ```
-// GET all posts
-app.get('/posts', (req, res) => {
-    res.json(posts);
-});
 
-// GET post by id
-app.get('/posts/:id', (req, res) => {
-    const post = posts.find(p => p.id === parseInt(req.params.id));
-    if (!post) return res.status(404).json({ message: 'Post not found' });
-    res.json(post);
-});
 ```
 
 ---
